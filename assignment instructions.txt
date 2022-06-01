@@ -42,14 +42,14 @@
 	job1.skills.add(skill1)
 	job1.skills.create(name="Java")
 
-8. In order to retrieve most fitting candidates for a job
+10. In order to retrieve most fitting candidates for a job
    you should enter: http://127.0.0.1:8000/<int:job_id>, 
    where <int:job_id> is the id given to some job.
    For example: http://127.0.0.1:8000/1.
    Getting id of a job variable is done by using the shell (from previous section):
    job1.id
 
-9. The output will be in the shape of a list of Candidate objects
+11. The output will be in the shape of a list of Candidate objects
    as a JSON file.
 		
    
