@@ -13,7 +13,7 @@
 
 6. Develop server via command: python manage.py runserver
 
-7. In order to add new enteries to the DB it will be convinient to use shell
+7. In order to add new entries to the DB it will be convenient to use shell
    by entering the command: python manage.py shell.
 
 8. Fields of the models:
@@ -32,7 +32,7 @@
 		* experience
     Other fields are added throughout the run when needed.
 
-9. Adding new entery example: 
+9. Adding new entry example: 
 	job1 = Job(title="Software Developer", max_candidates=20)
 	job1.save()
 
