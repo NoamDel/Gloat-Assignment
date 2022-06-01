@@ -1,0 +1,56 @@
+1. In settings.py change 'PASSWORD' field at DATABASES to your root password.
+
+2. Run command pip install -r requirements.txt to install all of the appropriate packages.
+
+3. Run MySQL server via command line: mysql -u root -p
+
+4. Enter you password.
+
+5. Create new database called "db" using the command: 
+   "CREATE DATABASE IF NOT EXISTS db;"
+   If there is already a database with the same name, change its name over the
+   "NAME" field at DATABASES in settings.py.
+
+6. Develop server via command: python manage.py runserver
+
+7. In order to add new enteries to the DB it will be convinient to use shell
+   by entering the command: python manage.py shell.
+
+8. Fields of the models:
+	- Skill: 
+		* name
+
+	- Job:
+		* title
+		* max_candidates
+		* skills
+		* id
+
+	- Candidate:
+		*title
+		* skills
+		* experience
+    Other fields are added throughout the run when needed.
+
+9. Adding new entery example: 
+	job1 = Job(title="Software Developer", max_candidates=20)
+	job1.save()
+
+	skill1 = Skill(name="Python")
+	skill1.save()
+
+	job1.skills.add(skill1)
+	job1.skills.create(name="Java")
+
+8. In order to retrieve most fitting candidates for a job
+   you should enter: http://127.0.0.1:8000/<int:job_id>, 
+   where <int:job_id> is the id given to some job.
+   For example: http://127.0.0.1:8000/1.
+   Getting id of a job variable is done by using the shell (from previous section):
+   job1.id
+
+9. The output will be in the shape of a list of Candidate objects
+   as a JSON file.
+		
+   
+
